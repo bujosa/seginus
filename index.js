@@ -1,11 +1,16 @@
 require('dotenv').config();
-const Discord = require('discord.js');
+const { Client, Intents } = require('discord.js');
 
-const client = new Discord.Client();
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-//make sure this line is the last line
+client.on('messageCreate', (msg) => {
+  if (msg.content === 'ping') {
+    msg.reply('Pong!');
+  }
+});
+
 client.login(process.env.CLIENT_TOKEN);
