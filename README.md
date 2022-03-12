@@ -1,1 +1,1 @@
-"# Seginus" 
+# Seginus
