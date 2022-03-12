@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/bujosa/Seginus#readme",
   "dependencies": {
-    "discord.js": "^13.6.0"
+    "axios": "^0.26.1",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0"
   }
 }
